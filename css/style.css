@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+/* Intro */
+.intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 64px;
+  & .intro-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & h1 {
+      font-size: 64px;
+      margin-bottom: 15px;
+      line-height: none;
+    }
+
+    & .intro-nav {
+
+      & a {
+        color: #000;
+        margin-right: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  & .intro-avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    & img {
+      width: 350px;
+    }
+  }
+}
+
+/* PROJECT */
+.project {
+  & .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 64px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 64px;
+
+      & .project-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & h2 {
+          margin-bottom: 15px;
+        }
+
+        & p {
+          width: 400px;
+        }
+
+        & a {
+          color: #000;
+          cursor: pointer;
+        }
+      }
+
+      & .project-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        & img {
+          width: 100%;
+        }
+      }
+  
+  
+    }
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  max-width: 1280px;
+  height: 100px;
+  text-align: center;
+  & .footer-nav {
+    cursor: pointer;
+  
+    & a {
+      color: #000;
+      margin-right: 30px;
+      font-weight: 700;
+      
+    }
+  }
+}
+
+@media (width < 1280px) {
+
+  .container {
+    padding: 10px;
+  }
+  .intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .project {
+    & .project-container {
+      grid-template-columns: 1fr;
+
+      & .project-text {
+        margin-bottom: 64px;
+
+        & p {
+          text-align: justify;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
